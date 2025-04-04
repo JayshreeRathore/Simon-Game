@@ -1,33 +1,108 @@
-body{
-    text-align: center;
-    
-}
-.btn{
-    border: 5px solid black;
-    width: 150px;
-    height: 150px;
-    border-radius: 10px;
-    margin: 2.5rem;
-   
-}
-.btn-container{
+
+
+   * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #111;
+    color: white;
     display: flex;
     justify-content: center;
-    
-}
-
-.yellow{
-    background-color: yellow;
-}
-.green{
-    background-color: green;
-}
-.purple{
-    background-color: purple;
-}
-.red{
-    background-color: red;
-}
-.flash{
-    background-color: #c9c1a9;
-}
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  h2, h3 {
+    margin: 10px 0;
+    font-weight: 400;
+  }
+  
+  .button-panel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .btn {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  #green { background-color: #28a745; }
+  #red { background-color: #dc3545; }
+  #yellow { background-color: #ffc107; }
+  #blue { background-color: #007bff; }
+  
+  .flash {
+    opacity: 0.5;
+    box-shadow: 0 0 15px white;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .controls button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    min-width: 100px;
+    transition: 0.3s ease;
+  }
+  
+  #start-btn { background: #28a745; color: white; }
+  #restart-btn { background: #ffc107; }
+  #end-btn { background: #dc3545; color: white; }
+  
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 500px) {
+    h1 { font-size: 2rem; }
+    .controls button { padding: 8px 14px; font-size: 0.9rem; }
+  }
+  
+  /* Responsive Typography */
+  @media (max-width: 500px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1rem;
+    }
+  
+    .controls button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  }
+  
